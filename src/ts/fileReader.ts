@@ -3,7 +3,7 @@ import { Result } from "./core";
 enum FileReadingError {
   FILE_NOT_FOUND,
   FILE_NOT_READABLE,
-  // ,,,
+  // ...
 }
 
 function readFile(path: string): Result<string, FileReadingError> {

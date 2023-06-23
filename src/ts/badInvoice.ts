@@ -9,7 +9,7 @@ type BadInvoice = {
     cancelledReason: string | null;
 }
 
-const goodState: BadInvoice = {
+const validState: BadInvoice = {
     uuid: '123',
     amount: 100,
     state: 'paid',
@@ -20,7 +20,7 @@ const goodState: BadInvoice = {
     cancelledReason: null,
 }
 
-const badState: BadInvoice = {
+const invalidState: BadInvoice = {
     uuid: '123',
     amount: 100,
     state: 'pending',

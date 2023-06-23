@@ -121,3 +121,18 @@ type Report =
   | AwaitingReviewReport
   | InReviewReport
   | CompletedReport;
+
+function assignReport(
+  report: UnassignedUnconfirmedReport,
+  assignedTo: PersonSurveyor,
+  assignedAt: string,
+  assignedBy: PersonManager
+): AssignedUnconfirmedReport {
+  return {
+    ...report,
+    type: "assigned_unconfirmed",
+    assignedTo,
+    assignedAt,
+    assignedBy,
+  };
+}

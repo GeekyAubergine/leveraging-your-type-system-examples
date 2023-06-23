@@ -24,6 +24,28 @@ export function Err<E>(error: E): Err<E> {
   };
 }
 
+export type Some<T> = {
+  some: true;
+  value: T;
+};
+
+export type None = {
+  some: false;
+};
+
+export type Option<T> = Some<T> | None;
+
+export function Some<T>(value: T): Some<T> {
+  return {
+    some: true,
+    value,
+  };
+}
+
+export const None: None = {
+  some: false,
+};
+
 export function exhaust(
   _value: never,
   message = "Failed exhaustive check"
